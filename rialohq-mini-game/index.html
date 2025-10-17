@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RialoHQ Mini Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Monomaniac+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="brand">
+      <div class="brand-badge">R</div>
+      <h1 class="brand-name">RialoHQ</h1>
+    </header>
+
+    <main class="game-card">
+      <div class="hud">
+        <div class="score">Score: <span id="score">0</span></div>
+        <button id="restartBtn" class="ghost" aria-label="Restart" title="Restart" hidden>↻</button>
+      </div>
+
+      <canvas id="game" width="720" height="420" aria-label="RialoHQ Runner"></canvas>
+
+      <div id="overlay" class="overlay">
+        <h2 class="title">RialoHQ Runner</h2>
+        <p class="subtitle">Dodge the obstacles. How high can you score?</p>
+        <ul class="tips">
+          <li><b>Desktop:</b> Arrow keys or Space to jump</li>
+          <li><b>Mobile:</b> Tap anywhere to jump</li>
+        </ul>
+        <button id="startBtn" class="primary">Start</button>
+      </div>
+    </main>
+
+    <footer class="credits">
+      <span>Drop your character image at <code>assets/character.png</code>. It will load automatically.</span>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* RialoHQ Mini Game Styles */
+:root {
+  --bg1: #0f1020;
+  --bg2: #1a1b2e;
+  --card: rgba(255,255,255,0.06);
+  --card-border: rgba(255,255,255,0.12);
+  --text: #e8e9f3;
+  --muted: #b9bcd6;
+  --brand: #6ee7ff;
+  --brand-2: #8b5cf6;
+  --accent: #22d3ee;
+  --danger: #ff5d73;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% 10%, #1a2140 0%, var(--bg1) 45%, #0a0b15 100%);
+  background-attachment: fixed;
+}
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 16px 40px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-badge {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #0b1020;
+  font-weight: 800;
+}
+.brand-name {
+  margin: 0;
+  font-family: 'Monomaniac One', system-ui;
+  letter-spacing: 0.5px;
+  font-size: 28px;
+}
+.game-card {
+  width: 100%;
+  max-width: 840px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid var(--card-border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+  position: relative;
+}
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 6px 12px;
+}
+.score { color: var(--muted); }
+canvas#game {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: linear-gradient(180deg, #0c1224 0%, #0a0f1c 100%);
+  image-rendering: -webkit-optimize-contrast;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(12,18,36,0.85), rgba(10,15,28,0.85));
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  text-align: center;
+  padding: 24px;
+}
+.overlay .title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+.overlay .subtitle { margin: 0 0 14px; color: var(--muted); }
+.tips { list-style: none; padding: 0; margin: 0 0 18px; color: var(--muted); }
+.tips li { margin: 4px 0; }
+button {
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #0b1020;
+  cursor: pointer;
+}
+button.primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+}
+button.ghost {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--card-border);
+}
+.credits { color: var(--muted); font-size: 12px; }
+.credits code { color: var(--accent); }
